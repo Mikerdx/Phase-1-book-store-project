@@ -38,21 +38,35 @@ const fetchBooks = (query = "javascript") => {//makes request to the IT store --
   // Load books on page load
   fetchBooks();//loads book searched
   
+  
+  
+  
+  
+  
+  
   document.addEventListener("DOMContentLoaded", function () {
-    const themeToggleButton = document.querySelector("[data-theme-toggle]");
-    const body = document.body;
-
-    // Load saved theme from localStorage
-    const savedTheme = localStorage.getItem("theme") || "light";
-    body.setAttribute("data-theme", savedTheme);
-    updateButtonText(savedTheme);
-
-    // Toggle theme on button click
-    themeToggleButton.addEventListener("click", function () {
-        const currentTheme = body.getAttribute("data-theme");
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-
-        body.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
-        updateButtonText(newTheme);
-    });
+      const themeToggleButton = document.querySelector("[data-theme-toggle]");
+      const body = document.body;
+  
+      // Load saved theme from localStorage
+      const savedTheme = localStorage.getItem("theme") || "light";
+      body.setAttribute("data-theme", savedTheme);
+      updateButtonText(savedTheme);
+  
+      // Toggle theme on button click
+      themeToggleButton.addEventListener("click", function () {
+          const currentTheme = body.getAttribute("data-theme");
+          const newTheme = currentTheme === "light" ? "dark" : "light";
+  
+          body.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          updateButtonText(newTheme);
+      });
+  
+      // Function to update button text based on theme
+      function updateButtonText(theme) {
+          themeToggleButton.textContent = theme === "light" ? "Change to dark theme" : "Change to light theme";
+          themeToggleButton.setAttribute("aria-label", `Change to ${theme === "light" ? "dark" : "light"} theme`);
+      }
+  });
+  
