@@ -41,3 +41,18 @@ const fetchBooks = (query = "javascript") => {//makes request to the IT store --
   document.addEventListener("DOMContentLoaded", function () {
     const themeToggleButton = document.querySelector("[data-theme-toggle]");
     const body = document.body;
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem("theme") || "light";
+    body.setAttribute("data-theme", savedTheme);
+    updateButtonText(savedTheme);
+
+    // Toggle theme on button click
+    themeToggleButton.addEventListener("click", function () {
+        const currentTheme = body.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+
+        body.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        updateButtonText(newTheme);
+    });
