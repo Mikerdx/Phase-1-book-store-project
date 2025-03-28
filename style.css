@@ -29,6 +29,7 @@
     color: #fff;
     text-decoration: none;
   }
+  
   nav {
     display: flex;
     align-items: center;
@@ -101,8 +102,9 @@
     color: #fff;
     margin-bottom: 30px;
   }
+  
   /* Main content */
-.main-content {
+  .main-content {
     background-color: #f9f9f9;
     padding: 40px;
     border-radius: 10px;
@@ -137,4 +139,46 @@
     color: #fff;
     padding: 20px;
     text-align: center;
+  }
+  [data-theme="light"] {
+     --color-bg: #ffffff;
+     --color-fg: #000000;
+  }
+  
+  [data-theme="dark"] {
+     --color-bg: #000000;
+     --color-fg: #ffffff;
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+  }
+  
+  button.theme {
+    background-color: red; /* Set background to red */
+    color: white
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all var(--global-transition-time) ease-in-out;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: var(--color-fg);
+    border: 0.25rem solid var(--color-fg);}
+  button.theme:hover {
+      background-color:#002ead;
+        transition: 0.7s;
+  }
+  [data-theme="dark"] .book {
+    background-color: #222; /* Darkened background */
+    color: #fff; /* White text for contrast */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  [data-theme="dark"] .books {
+    background-color: #111; /* Darken the whole book section */
   }
