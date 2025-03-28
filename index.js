@@ -11,3 +11,5 @@ const fetchBooks = (query = "javascript") => {//makes request to the IT store --
 const displayBooks = (books) => {
     const booksContainer = document.querySelector(".books");//selects .books container
     booksContainer.innerHTML = ""; // Clear previous content before adding new books  
+     
+    books.forEach(book => {// selects each book displayed
