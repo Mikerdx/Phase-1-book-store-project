@@ -29,4 +29,75 @@
     color: #fff;
     text-decoration: none;
   }
+  nav {
+    display: flex;
+    align-items: center;
+  }
   
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-left: 25px;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.4s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #666;
+  }
+  
+  .search {
+    position: relative;
+  }
+  
+  .search input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .search button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  /* Hero section */
+  .hero {
+    background-color: #ffb6c1;
+    padding: 40px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    color: #fff;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
