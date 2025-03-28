@@ -19,3 +19,4 @@ const displayBooks = (books) => {
             <img src="${book.image}" alt="${book.title}">
              <h3>${book.title}</h3>
             <p>${book.subtitle}</p>
+              <p>Price: <strong>${book.price}</strong></p>
