@@ -13,3 +13,5 @@ const displayBooks = (books) => {
     booksContainer.innerHTML = ""; // Clear previous content before adding new books  
      
     books.forEach(book => {// selects each book displayed
+        const bookDiv = document.createElement("div");//creates a div to add book image,title, subtitle,price and the link to view more information from original store 
+        
