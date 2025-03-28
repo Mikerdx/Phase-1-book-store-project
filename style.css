@@ -1,184 +1,194 @@
 /* General styles of the webpage */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-  }
-  
-  /* Header stylings */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .logo {
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .logo a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin-left: 25px;
-    list-style: none;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: bold;
-    transition: 0.4s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #666;
-  }
-  
-  .search {
-    position: relative;
-  }
-  
-  .search input {
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: #444;
-    color: #fff;
-  }
-  
-  .search button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: #fff;
-    color: #444;
-    font-weight: bold;
-  }
-  
-  /* Hero section */
-  .hero {
-    background-color: #ffb6c1;
-    padding: 40px 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    color: #fff;
-  }
-  
-  .hero p {
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  
-  /* Main content */
-  .main-content {
-    background-color: #f9f9f9;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .books {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    margin-top: 40px;
-  }
-  
-  /* Button */
-  .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.4s ease;
-  }
-  
-  .btn:hover {
-    background-color: #555;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #262626;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  [data-theme="light"] {
-     --color-bg: #ffffff;
-     --color-fg: #000000;
-  }
-  
-  [data-theme="dark"] {
-     --color-bg: #000000;
-     --color-fg: #ffffff;
-  }
-  
-  body {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    display: grid;
-    min-height: 100vh;
-    place-items: center;
-  }
-  
-  button.theme {
-    background-color: red; /* Set background to red */
-    color: white
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    transition: all var(--global-transition-time) ease-in-out;
-    border-radius: 2rem;
-    cursor: pointer;
-    color: var(--color-fg);
-    border: 0.25rem solid var(--color-fg);}
-  button.theme:hover {
-      background-color:#002ead;
-        transition: 0.7s;
-  }
-  [data-theme="dark"] .book {
-    background-color: #222; /* Darkened background */
-    color: #fff; /* White text for contrast */
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-  }
-  
-  [data-theme="dark"] .books {
-    background-color: #111; /* Darken the whole book section */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Header stylings */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-left: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+/* Search bar */
+.search {
+  position: relative;
+}
+
+.search input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #444;
+  color: #fff;
+}
+
+.search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #444;
+  font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+  background-color: #ffb6c1;
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Main content */
+.main-content {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Books grid */
+.books {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 40px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #262626;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Light mode theme */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+/* Dark mode theme */
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .book {
+  background-color: #222; /* Darkened background */
+  color: #fff; /* White text for contrast */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .books {
+  background-color: #111; /* Darken the whole book section */
+}
+
+/* Theme Toggle Button */
+button.theme {
+  background-color: red; /* Set background to red */
+  color: white; /* White text for visibility */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 0.25rem solid var(--color-fg);
+}
+
+button.theme:hover {
+  background-color: #002ead;
+  transition: 0.7s;
+}
