@@ -38,4 +38,6 @@ const fetchBooks = (query = "javascript") => {//makes request to the IT store --
   // Load books on page load
   fetchBooks();//loads book searched
   
-  
+  document.addEventListener("DOMContentLoaded", function () {
+    const themeToggleButton = document.querySelector("[data-theme-toggle]");
+    const body = document.body;
