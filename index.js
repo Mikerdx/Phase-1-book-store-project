@@ -20,3 +20,6 @@ const displayBooks = (books) => {
              <h3>${book.title}</h3>
             <p>${book.subtitle}</p>
               <p>Price: <strong>${book.price}</strong></p>
+              <a href="${book.url}" target="_blank">More Info</a>
+        `;
+        
