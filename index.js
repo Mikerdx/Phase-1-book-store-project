@@ -7,4 +7,7 @@ const fetchBooks = (query = "javascript") => {//makes request to the IT store --
   
           .catch(error => console.error("Error fetching books:", error));//logs the error to the console
   };
-  
+// Display books dynamically
+const displayBooks = (books) => {
+    const booksContainer = document.querySelector(".books");//selects .books container
+    booksContainer.innerHTML = ""; // Clear previous content before adding new books  
