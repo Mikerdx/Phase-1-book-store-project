@@ -17,3 +17,5 @@ const displayBooks = (books) => {
         bookDiv.classList.add("book");
         ookDiv.innerHTML = `
             <img src="${book.image}" alt="${book.title}">
+             <h3>${book.title}</h3>
+            <p>${book.subtitle}</p>
