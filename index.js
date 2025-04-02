@@ -26,12 +26,14 @@ const displayBooks = (books) => {
         `;
         
         // Add event listener to delete button
-        bookDiv.querySelector(".delete-button").addEventListener("click", () => {
+        const deleteButton = bookDiv.querySelector(".delete-button");
+        deleteButton.addEventListener("click", () => {
             bookDiv.remove();//removes bookDiv from the container
         });
         
         // Add event listener to buy button (placeholder functionality)
-        bookDiv.querySelector(".buy-button").addEventListener("click", () => {
+        const buyButton = bookDiv.querySelector(".buy-button");
+        buyButton.addEventListener("click", () => {
             alert(`You have selected '${book.title}' to buy.`);//alerts the user when they select buy
         });
         
@@ -40,7 +42,8 @@ const displayBooks = (books) => {
 };
 
 // Search functionality
-document.querySelector("#search-button").addEventListener("click", (event) => {
+const searchButton = document.querySelector("#search-button");
+searchButton.addEventListener("click", (event) => {
     event.preventDefault(); // Prevents default form submission
     const query = document.querySelector("#search-input").value.trim(); // Get search input value and remove leading/trailing spaces
     if (query) fetchBooks(query); // Only fetch books if query is not empty
